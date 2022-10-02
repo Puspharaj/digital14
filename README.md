@@ -28,7 +28,7 @@ A few resources to get you started if this is your first Flutter project:
 
 * Runs on android and web as well(not optimised for web UI), It should work on MacOs(I don not have mac machine to test it).
 
-* Favorite event can be marked - will retain the favorite even after restart the app.
+* Favorite event can be marked - will retain the favorite even after restarting the app.
 
 * Pagination configured for future use case (not implemented).
 
@@ -39,13 +39,13 @@ A few resources to get you started if this is your first Flutter project:
 
 * Detail screen to drill down the event.
 
-* Bloc state management is used to ensure production level application.
+* Bloc state management is used to ensure production level application. ( Architecture choice )
 
-* Unit test added to test the simeple loading event is loading correctly, Also the detail screen receives the correct event    is  tested through unit test.
+* Unit test is done to test the loading the events correctly, Also the detail screen receives the correct event is  tested through unit test.
 
-* Rive animation is added extra for fun to animate the whole app to new level(lot more to add). 
+* Rive animation is added for extra fun to animate the whole app to a new level(lot more to add). 
 
-* All api endpoint has been configured with client id.
+* Api endpoint has been configured with client id.
 
 ##############################
 
