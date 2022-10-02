@@ -50,6 +50,23 @@ A few resources to get you started if this is your first Flutter project:
 ##############################
 
 
+########## Packages used
+##############################
+
+* Google fonts for great fonts.
+
+* intl package for date format.
+
+* http package for api calls.
+
+* equatabble for comparing same objects.
+
+* rive for animation.
+
+* shared_prefrences for storing favorite.
+
+#############################
+
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
