@@ -1,5 +1,6 @@
 import 'package:digital_14_puspharaj/widgets/listitem.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({Key? key, required this.item}) : super(key: key);
@@ -74,7 +75,11 @@ class DetailPage extends StatelessWidget {
                   padding: const EdgeInsets.all(4.0),
                   child: Text(
                     // formatter.parse(date).toString(),
-                    item.date,
+                    DateFormat("E, d MMM yyyy hh:mm a")
+                        .format(
+                          DateTime.parse(item.date),
+                        )
+                        .toString(),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                     softWrap: true,

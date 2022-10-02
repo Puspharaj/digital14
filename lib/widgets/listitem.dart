@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Item extends StatelessWidget {
   const Item({
@@ -17,10 +18,14 @@ class Item extends StatelessWidget {
   final String date;
   final int favorite;
   final int id;
-  // final DateFormat formatter = DateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
 
   @override
   Widget build(BuildContext context) {
+    debugPrint(
+      DateFormat("dd/MM/yyyy hh:mm").format(
+        DateTime.parse(date),
+      ),
+    );
     return Row(
       children: [
         Padding(
@@ -79,8 +84,11 @@ class Item extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(4.0),
                 child: Text(
-                  // formatter.parse(date).toString(),
-                  date,
+                  DateFormat("E, d MMM yyyy hh:mm a")
+                      .format(
+                        DateTime.parse(date),
+                      )
+                      .toString(),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                   softWrap: true,

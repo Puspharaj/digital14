@@ -8,3 +8,6 @@ const String URL = "https://api.seatgeek.com/2/";
 
 ///
 const String EVENT = 'events?';
+
+///
+const String PAGE = '&page=';

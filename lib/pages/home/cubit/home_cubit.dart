@@ -9,9 +9,9 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this.searchRepository) : super(HomeInitial());
 
   SearchRepository searchRepository;
-  Future listEvent() async {
+  Future listEvent(int pageNo) async {
     try {
-      ListEvent list = await searchRepository.fetchItems();
+      ListEvent list = await searchRepository.fetchItems(pageNo);
       emit(Success(list));
     } catch (e) {
       emit(Failed(e.toString()));

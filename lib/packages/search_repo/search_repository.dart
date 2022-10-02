@@ -12,11 +12,10 @@ class SearchRepository {
   };
 
   /// List the items using a fetch call with the help of http package post
-  Future<ListEvent> fetchItems() async {
-    Uri uri = Uri.parse(
-      URL + EVENT + CLIENT_ID + CID,
-    );
+  Future<ListEvent> fetchItems(int page) async {
+    Uri uri = Uri.parse(URL + EVENT + CLIENT_ID + CID + PAGE + page.toString());
     ListEvent listEvent = const ListEvent();
+    debugPrint(uri.toString());
     try {
       await http.get(uri, headers: requestHeaders).then((value) {
         Map<String, dynamic> json = jsonDecode(value.body);

@@ -26,7 +26,7 @@ class Digital14 extends StatelessWidget {
       value: (context) => searchRepository,
       child: BlocProvider(
         create: (context) => HomeCubit(searchRepository)
-          ..listEvent()
+          ..listEvent(1)
           ..readFavorite(),
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
